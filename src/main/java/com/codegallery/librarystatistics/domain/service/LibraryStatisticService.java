@@ -4,6 +4,7 @@ import com.codegallery.librarystatistics.domain.model.Book;
 import com.codegallery.librarystatistics.domain.model.Borrower;
 import com.codegallery.librarystatistics.domain.model.BorrowerStats;
 import com.codegallery.librarystatistics.domain.repository.BorrowerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class LibraryStatisticService {
 
     private BorrowerRepository borrowerRepository;
 
+    @Autowired
     public LibraryStatisticService(BorrowerRepository borrowerRepository) {
         this.borrowerRepository = borrowerRepository;
     }
